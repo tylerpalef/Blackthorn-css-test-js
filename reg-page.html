@@ -17,15 +17,21 @@
     button.mat-focus-indicator.quarter-width.add-all-btn.filter-field.mat-stroked-button.mat-button-base.mat-primary {
       display: none !important;
     }
+
+    body {
+      color: red !important;
+    }
   </style>
 </head>
 
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    var elements = document.getElementsByClassName('_ngcontent-ng-c672926284');
+    const buttons = document.querySelectorAll('button[_ngcontent-ng-c672926284]');
     if (elements.length > 0) {
-      elements[0].textContent = "New Label";
+      elements[3].textContent = "Next Steps";
     }
   });
+
+    
   </script>
 </html>
