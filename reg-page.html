@@ -25,13 +25,16 @@
 </head>
 
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll('button[_ngcontent-ng-c672926284]');
-    if (elements.length > 0) {
-      elements[3].textContent = "Next Steps";
-    }
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      const buttons = document.querySelectorAll('button[_ngcontent-ng-c672926284]');
+      if (buttons.length > 3) {
+        const span = buttons[3].querySelector('span.mat-button-wrapper');
+        if (span && span.textContent.trim().toLowerCase() === 'register') {
+          span.textContent = "Start Registration";
+        }
+      }
+    }, 1000);
   });
-
-    
   </script>
 </html>
